@@ -1,0 +1,88 @@
+*{
+    /* 모든 요소에
+      width/height가 설정될 때
+      content = width/height - (border*2) - (padding*2) 한 크기로 자동 계산에서 설정
+    -> 생각한 크기의 요소를 쉽게 만들 수 있도록 도와줌
+     */
+    box-sizing: border-box;
+  }
+
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+}
+
+/* border영역 */
+.border{
+    border : 10px solid black;  /* 10p 두께의 검정 실선 테두리 */
+ /*   width: 80px;
+    height: 80px;*/
+}
+
+/* content영역 */
+.content {
+    width: 150px;
+    height: 150px;
+
+/* width/height의 설정값이 content 영역에만 적용되도록 변경 */
+box-sizing: content-box;
+}
+
+
+/* padding (content와 border사이의 영역)영역 */
+.padding{
+    width: 200px;
+    height: 200px;
+    /* 상하좌우 contetn와border사이에 20px추가 */
+    padding: 20px;
+}
+
+/* margin영역 */
+.margin{
+    /* 상하좌우 다른요소(부모,형제요소) 50px만큼 간격설정*/
+    margin : 50px
+}
+
+.margin2{
+    margin : 100px;
+}
+
+
+/* padding, border, margin 방향성  */
+
+#test1{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 15px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 200px;
+
+    border-top: 100px solid red;  /* solid= 실선 */
+    border-bottom: 3px dotted black;   /* dotted=점선 (.)*/
+    border-left: 10px double green;   /* douvle=이중실선 */
+    border-right: 3px dashed yellow; /* dashed = 점선(-) */
+ }
+
+
+ #test2{border :1px solid black;}
+
+
+ /* margin : auto 테스트 */
+ .container{
+    width: 500px;
+    height: 500px;
+    border: 3px solid black;
+    box-sizing: content-box;
+ }
+
+ #test3{
+    margin:auto;
+    margin-top: 200px;
+ }
